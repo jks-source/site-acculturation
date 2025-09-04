@@ -64,6 +64,7 @@ nav a:hover {
     padding-top: 10%;
     width: 100%;
     display: flex;
+    text-align: center;
 }
 .gauchefufu {
     width: 50%;
@@ -131,16 +132,11 @@ nav a:hover {
   font-family: inherit;
   font-size: 1em;
   transition: box-shadow 0.3s ease, border-color 0.3s ease; 
-  /* transition = effet fluide quand box-shadow ou border-color change */
 }
 input:focus,
 textarea:focus {
   outline: none; /* enlève le contour par défaut du navigateur */
-  
-  /* Ombre blanche autour du champ */
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
-  
-  /*changer légèrement la bordure pour renforcer l'effet */
   border-color: #fff;
 }
 #contact form textarea {
@@ -162,16 +158,31 @@ textarea:focus {
   background: #d6d0c2;
 }
 
-/* Responsive : quand l’écran est étroit */
 @media (max-width: 768px) {
-  #contact {
+  #contact, #fufu {
     flex-direction: column;
     align-items: center;
   }
-
+  .logo{
+    padding-bottom: 1%;
+  }
   #contact .texteCont,
   #contact form {
     width: 90%;
+  }
+}
+@media (max-width: 528px) {
+  header nav  {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 339px) {
+  header h1 {
+    font-size: 100%;
+  }
+  header nav a {
+    font-size: 100%;
   }
 }
 
